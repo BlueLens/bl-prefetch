@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 export ORG="bluelens"
-export IMAGE="bl-classify"
+export IMAGE="bl-prefetch"
 export TAG='dev'
 export NAMESPACE="dev"
 
@@ -16,4 +16,3 @@ kubectl --namespace=$NAMESPACE rollout status deployment/$IMAGE
 
 #restart pod
 kubectl --namespace=$NAMESPACE delete pod -l name=$IMAGE
-
